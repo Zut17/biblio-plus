@@ -46,9 +46,9 @@ input{
 }
 h1{
   text-align: center;
-  background-color: rgba(226, 253, 199, 0.868);
+  background-color: rgba(248, 248, 232, 0.868);
   border-radius: 10px;
-  border: 2px solid rgb(212, 255, 0);
+  border: 2px solid rgba(248, 248, 232, 0.868);
 }
 ul{
   margin: 0;
@@ -59,15 +59,15 @@ li{
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin: 3px 0px;
-  background-color: rgba(226, 253, 199, 0.868);
+  margin: 5px 0px;
+  background-color: rgba(248, 248, 232, 0.868);
   border-radius: 5px;
 }
 span{
   width: 30%;
 }
 button{
-  background-color: rgb(254, 255, 195);
+  background-color: rgba(199, 249, 93, 0.712);
   padding: 7px;
   border-radius: 10px;
   border: none;
