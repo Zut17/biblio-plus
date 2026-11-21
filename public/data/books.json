@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Le Petit Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "category": "Roman",
+    "year": 1943,
+    "available": true,
+    "cover": "/covers/petit-prince.jpg",
+    "summary": "Un aviateur échoué dans le désert rencontre un petit prince."
+  },
+  {
+    "id": 2,
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "category": "Roman",
+    "year": 1862,
+    "available": false,
+    "cover": "/covers/les-miserables.jpg",
+    "summary": "Le destin de Jean Valjean croise celui de nombreuses personnes dans la France du XIXe siècle."
+  },
+  {
+    "id": 3,
+    "title": "L'Étranger",
+    "author": "Albert Camus",
+    "category": "Roman",
+    "year": 1942,
+    "available": true,
+    "cover": "/covers/l-etranger.jpg",
+    "summary": "Meursault raconte les événements qui suivent la mort de sa mère."
+  },
+  {
+    "id": 4,
+    "title": "Harry Potter à l'école des sorciers",
+    "author": "J. K. Rowling",
+    "category": "Jeunesse",
+    "year": 1997,
+    "available": true,
+    "cover": "/covers/harry-potter.jpg",
+    "summary": "Un jeune garçon découvre qu'il est sorcier et entre à l'école de Poudlard."
+  },
+  {
+    "id": 5,
+    "title": "Charlie et la Chocolaterie",
+    "author": "Roald Dahl",
+    "category": "Jeunesse",
+    "year": 1964,
+    "available": false,
+    "cover": "/covers/charlie-chocolaterie.jpg",
+    "summary": "Charlie remporte une place pour visiter la fabuleuse usine de Willy Wonka."
+  },
+  {
+    "id": 6,
+    "title": "Matilda",
+    "author": "Roald Dahl",
+    "category": "Jeunesse",
+    "year": 1988,
+    "available": true,
+    "cover": "/covers/matilda.jpg",
+    "summary": "Une petite fille brillante utilise son intelligence et ses pouvoirs extraordinaires."
+  },
+  {
+    "id": 7,
+    "title": "Une brève histoire du temps",
+    "author": "Stephen Hawking",
+    "category": "Documentaire",
+    "year": 1988,
+    "available": true,
+    "cover": "/covers/histoire-du-temps.jpg",
+    "summary": "Une introduction accessible aux grandes questions de l'univers et de l'espace."
+  },
+  {
+    "id": 8,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "category": "Documentaire",
+    "year": 2011,
+    "available": false,
+    "cover": "/covers/sapiens.jpg",
+    "summary": "Une histoire de l'humanité, de l'apparition de Homo sapiens à nos sociétés modernes."
+  },
+  {
+    "id": 9,
+    "title": "La Terre vue du ciel",
+    "author": "Yann Arthus-Bertrand",
+    "category": "Documentaire",
+    "year": 2002,
+    "available": true,
+    "cover": "/covers/terre-vue-du-ciel.jpg",
+    "summary": "Un voyage photographique pour découvrir la beauté et la fragilité de notre planète."
+  },
+  {
+    "id": 10,
+    "title": "Le Comte de Monte-Cristo",
+    "author": "Alexandre Dumas",
+    "category": "Roman",
+    "year": 1844,
+    "available": true,
+    "cover": "/covers/monte-cristo.jpg",
+    "summary": "Edmond Dantès revient riche et puissant pour se venger de ceux qui l'ont trahi."
+  },
+  {
+    "id": 11,
+    "title": "Le Jardin secret",
+    "author": "Frances Hodgson Burnett",
+    "category": "Jeunesse",
+    "year": 1911,
+    "available": false,
+    "cover": "/covers/jardin-secret.jpg",
+    "summary": "Mary découvre un jardin fermé qui transforme sa vie et celle de ses nouveaux amis."
+  },
+  {
+    "id": 12,
+    "title": "Dans la forêt",
+    "author": "Jean-Marc Jancovici",
+    "category": "Documentaire",
+    "year": 2017,
+    "available": true,
+    "cover": "/covers/dans-la-foret.jpg",
+    "summary": "Une exploration du rapport entre l'énergie, la société et les ressources naturelles."
+  }
+]
