@@ -19,3 +19,22 @@ img { max-width: 100%; height: auto; }
   position: absolute; width: 1px; height: 1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
+
+/* --- Mise en page responsive --- */
+#app { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; width: 100%; }
+
+h1 { font-size: var(--fs-600); line-height: 1.2; overflow-wrap: anywhere; }
+
+input, select, textarea, button { font: inherit; }
+
+/* Conteneur des pages internes (catalogue, détail, contact, 404) */
+.page {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+@media (min-width: 48em) {
+  .page { padding: var(--space-6); }
+}

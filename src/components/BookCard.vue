@@ -38,13 +38,14 @@ const emit = defineEmits(['toggle-favorite'])
   padding: var(--space-4);
   box-shadow: var(--shadow-card);
   height: 100%;
+  min-width: 0;
 }
 .book-card__cover {
   display: block;
   margin: 0 auto var(--space-4);
   border-radius: var(--radius);
 }
-.book-card__title { font-size: var(--fs-300); margin: 0 0 var(--space-2); }
+.book-card__title { font-size: var(--fs-300); margin: 0 0 var(--space-2); overflow-wrap: anywhere; }
 .book-card__author { margin: 0 0 var(--space-2); color: var(--color-text-muted); }
 .book-card__status { margin: 0 0 var(--space-2); font-weight: 600; color: var(--color-primary); }
 .book-card__status--off { color: var(--color-danger); }

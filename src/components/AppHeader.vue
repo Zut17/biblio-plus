@@ -14,9 +14,11 @@
 <style scoped>
 .app-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-4) var(--space-6);
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-4);
   background: var(--color-primary);
   color: var(--color-primary-contrast);
 }
@@ -24,7 +26,8 @@
 .app-header__logo { font-size: var(--fs-300); font-weight: 700; }
 .app-header__nav {
   display: flex;
-  gap: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -32,5 +35,8 @@
 .app-header__nav a.router-link-active {
   font-weight: 700;
   border-bottom: 2px solid currentColor;
+}
+@media (min-width: 48em) {
+  .app-header { padding: var(--space-4) var(--space-6); }
 }
 </style>

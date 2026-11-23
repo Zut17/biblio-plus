@@ -34,11 +34,14 @@ onMounted(load)
 
 <style scoped>
 .hero {
-  padding: var(--space-6);
+  padding: var(--space-6) var(--space-4);
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
 }
 .hero h1 { font-size: var(--fs-600); margin: 0 0 var(--space-4); }
-.featured { padding: var(--space-6); }
+.featured { padding: var(--space-6) var(--space-4); }
 .featured h2 { margin-top: 0; }
+@media (min-width: 48em) {
+  .hero, .featured { padding: var(--space-6); }
+}
 </style>

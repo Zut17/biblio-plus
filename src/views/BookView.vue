@@ -17,12 +17,18 @@ onMounted(async () => {
 </script>
 
 <template>
-  <p v-if="loading" role="status">Chargement…</p>
-  <article v-else-if="book">
-    <h1>{{ book.title }}</h1>
-    <p>{{ book.author }} · {{ book.year }}</p>
-    <p>{{ book.summary }}</p>
-    <p>{{ book.available ? 'Disponible' : 'Emprunté' }}</p>
-    <RouterLink to="/catalogue">← Retour au catalogue</RouterLink>
-  </article>
+  <div class="page">
+    <p v-if="loading" role="status">Chargement…</p>
+    <article v-else-if="book" class="book-detail">
+      <h1>{{ book.title }}</h1>
+      <p>{{ book.author }} · {{ book.year }}</p>
+      <p>{{ book.summary }}</p>
+      <p>{{ book.available ? 'Disponible' : 'Emprunté' }}</p>
+      <RouterLink to="/catalogue">← Retour au catalogue</RouterLink>
+    </article>
+  </div>
 </template>
+
+<style scoped>
+.book-detail { max-width: 45rem; }
+</style>

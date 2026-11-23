@@ -36,29 +36,73 @@ watch([query, category, sort], () => (page.value = 1))
 </script>
 
 <template>
-  <h1>Catalogue</h1>
+  <div class="page">
+    <h1>Catalogue</h1>
 
-  <input v-model="query" type="search" aria-label="Rechercher" />
-  <select v-model="category" aria-label="Catégorie">
-    <option value="">Toutes</option>
-    <option v-for="c in categories" :key="c">{{ c }}</option>
-  </select>
-  <select v-model="sort" aria-label="Trier par">
-    <option value="title">Titre</option>
-    <option value="year">Année</option>
-  </select>
+    <div class="toolbar">
+      <input v-model="query" type="search" aria-label="Rechercher" placeholder="Titre, auteur…" />
+      <select v-model="category" aria-label="Catégorie">
+        <option value="">Toutes</option>
+        <option v-for="c in categories" :key="c">{{ c }}</option>
+      </select>
+      <select v-model="sort" aria-label="Trier par">
+        <option value="title">Titre</option>
+        <option value="year">Année</option>
+      </select>
+    </div>
 
-  <p v-if="loading" role="status">Chargement…</p>
-  <div v-else-if="error" role="alert">
-    <p>{{ error }}</p>
-    <button type="button" @click="load">Réessayer</button>
+    <p v-if="loading" role="status">Chargement…</p>
+    <div v-else-if="error" role="alert">
+      <p>{{ error }}</p>
+      <button type="button" @click="load">Réessayer</button>
+    </div>
+    <p v-else-if="!filtered.length">Aucun résultat.</p>
+    <BookList v-else :books="visible" />
+
+    <nav class="pagination" aria-label="Pagination">
+      <button :disabled="page === 1" @click="page--">Précédent</button>
+      <span>Page {{ page }} / {{ pageCount }}</span>
+      <button :disabled="page >= pageCount" @click="page++">Suivant</button>
+    </nav>
   </div>
-  <p v-else-if="!filtered.length">Aucun résultat.</p>
-  <BookList v-else :books="visible" />
-
-  <nav aria-label="Pagination">
-    <button :disabled="page === 1" @click="page--">Précédent</button>
-    <span>Page {{ page }} / {{ pageCount }}</span>
-    <button :disabled="page >= pageCount" @click="page++">Suivant</button>
-  </nav>
 </template>
+
+<style scoped>
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.toolbar input,
+.toolbar select {
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.toolbar input { flex: 1 1 14rem; min-width: 0; }
+.toolbar select { flex: 1 1 8rem; min-width: 0; }
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-6);
+}
+.pagination button {
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-primary-contrast);
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+</style>
