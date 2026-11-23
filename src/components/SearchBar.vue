@@ -21,4 +21,5 @@ const model = defineModel({ type: String, default: '' })
   border-radius: var(--radius);
   background: var(--color-surface);
 }
+.search__input::placeholder { color: var(--color-text-muted); opacity: 1; }
 </style>
