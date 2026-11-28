@@ -38,3 +38,20 @@ input, select, textarea, button { font: inherit; }
 @media (min-width: 48em) {
   .page { padding: var(--space-6); }
 }
+
+/* --- Transitions (séance 4) --- */
+.fade-enter-active, .fade-leave-active { transition: opacity 0.25s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+
+.slide-enter-active, .slide-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slide-enter-from { opacity: 0; transform: translateX(30px); }
+.slide-leave-to { opacity: 0; transform: translateX(-30px); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,15 +1,21 @@
 <script setup>
 import BookCard from './BookCard.vue'
 
-defineProps({ books: { type: Array, required: true } })
+defineProps({
+  books: { type: Array, required: true },
+  favorites: { type: Array, default: () => [] },
+})
 defineEmits(['toggle-favorite'])
 </script>
 
 <template>
   <ul class="book-list">
     <li v-for="book in books" :key="book.id">
-      <BookCard :book="book"
-                @toggle-favorite="$emit('toggle-favorite', $event)" />
+      <BookCard
+        :book="book"
+        :favorite="favorites.includes(book.id)"
+        @toggle-favorite="$emit('toggle-favorite', $event)"
+      />
     </li>
   </ul>
 </template>

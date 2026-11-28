@@ -16,7 +16,11 @@ defineProps({
 
 <style scoped>
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
   padding: var(--space-2) var(--space-4);
   border: 2px solid var(--color-primary);
   border-radius: var(--radius);
@@ -31,5 +35,9 @@ defineProps({
 .btn--ghost {
   background: transparent;
   color: var(--color-primary);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 </style>

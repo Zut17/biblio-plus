@@ -11,6 +11,11 @@ export default createRouter({
       component: () => import('@/views/CatalogueView.vue'),
     },
     {
+      path: '/favoris',
+      name: 'favorites',
+      component: () => import('@/views/FavoritesView.vue'),
+    },
+    {
       path: '/livres/:id',
       name: 'book',
       props: true,
