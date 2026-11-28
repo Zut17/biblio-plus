@@ -40,3 +40,45 @@ npm run build
 ```URL du site :
 ### https://biblio-plus-mosv.netlify.app/
 
+## Fonctionnalités réalisées
+
+**Must**
+- Page d'accueil avec carrousel « Coups de cœur »
+- Catalogue : recherche (temporisée), filtre par catégorie, tri, pagination
+- Page détail d'un livre et page 404
+- Formulaire de contact validé et accessible
+
+**Should**
+- Favoris persistants (Pinia + localStorage), compteur dans l'en-tête, page Favoris
+- Menu déroulant « Services » accessible au clavier
+- Modale de réservation avec validation
+- Design responsive mobile-first avec menu burger
+
+## Captures d'écran
+
+| Mobile | Desktop |
+|--------|---------|
+| ![Accueil mobile](captures/accueil-mobile.png) | ![Accueil desktop](captures/accueil-desktop.png) |
+
+## Scores Lighthouse (mobile)
+
+| Catégorie        | Avant | Après |
+|------------------|-------|-------|
+| Performance      | …     | …     |
+| Accessibilité    | …     | …     |
+| Bonnes pratiques | …     | …     |
+| SEO              | …     | …     |
+
+## Lancer le projet
+
+```sh
+npm install
+npm run dev          # développement
+npm run test:unit    # tests unitaires (Vitest)
+npm run test:e2e     # tests responsive (Playwright)
+npm run build        # build de production dans dist/
+```
+
+## Difficultés rencontrées
+
+- À remplir avec ton binôme
