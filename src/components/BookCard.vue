@@ -2,6 +2,7 @@
 defineProps({
   book: { type: Object, required: true },
   favorite: { type: Boolean, default: false },
+  eager: { type: Boolean, default: false },
 })
 const emit = defineEmits(['toggle-favorite'])
 </script>
@@ -9,7 +10,8 @@ const emit = defineEmits(['toggle-favorite'])
 <template>
   <article class="book-card">
     <img class="book-card__cover" :src="book.cover" width="200" height="300"
-         :alt="'Couverture de ' + book.title" loading="lazy" />
+         :alt="'Couverture de ' + book.title"
+         :loading="eager ? 'eager' : 'lazy'" />
     <div class="book-card__body">
       <h3 class="book-card__title">
         <RouterLink :to="{ name: 'book', params: { id: book.id } }">
@@ -50,6 +52,7 @@ const emit = defineEmits(['toggle-favorite'])
 .book-card__status { margin: 0 0 var(--space-2); font-weight: 600; color: var(--color-primary); }
 .book-card__status--off { color: var(--color-danger); }
 .book-card__fav {
+  min-height: 44px;
   font: inherit;
   padding: var(--space-2) var(--space-4);
   border: 1px solid var(--color-border);

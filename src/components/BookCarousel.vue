@@ -33,6 +33,7 @@ watch(() => props.items.length, () => (index.value = 0))
         class="carousel__card"
         :book="current"
         :favorite="favorites.includes(current.id)"
+        eager
         @toggle-favorite="$emit('toggle-favorite', $event)"
       />
     </Transition>

@@ -10,10 +10,11 @@ defineEmits(['toggle-favorite'])
 
 <template>
   <ul class="book-list">
-    <li v-for="book in books" :key="book.id">
+    <li v-for="(book, i) in books" :key="book.id">
       <BookCard
         :book="book"
         :favorite="favorites.includes(book.id)"
+        :eager="i < 2"
         @toggle-favorite="$emit('toggle-favorite', $event)"
       />
     </li>
@@ -27,6 +28,12 @@ defineEmits(['toggle-favorite'])
   padding: 0;
   display: grid;
   gap: var(--space-4);
-  grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr));
+  grid-template-columns: 1fr;
+}
+@media (min-width: 40em) {
+  .book-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 64em) {
+  .book-list { grid-template-columns: repeat(4, 1fr); }
 }
 </style>
